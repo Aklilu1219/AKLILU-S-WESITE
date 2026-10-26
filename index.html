@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-season="spring">
+<head>
+  <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aklilu Workineh | Full Stack Developer Portfolio</title>
+    <meta name="description" content="Personal portfolio of Aklilu Workineh, Full Stack Developer, featuring live in-browser CV & Cover Letter reader, project showcases, and VS Code export." />
+    <meta property="og:title" content="Aklilu Workineh | Full Stack Developer Portfolio" />
+    <meta property="og:description" content="Personal portfolio of Aklilu Workineh, Full Stack Developer, featuring live in-browser CV & Cover Letter reader, project showcases, and VS Code export." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts: Space Grotesk, Inter, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JSZip for in-browser VS Code packaging -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="/_aistudio-iframe.js?v=6634132a"></script></head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <a href="#home" class="logo-container" aria-label="Aklilu Workineh Home">
+            <div class="avatar-ring">
+                <span class="logo-bracket">&lt;</span><span class="logo-initials-text">AW</span><span class="logo-bracket">/&gt;</span>
+            </div>
+            <span class="logo-text">Aklilu Workineh<span class="logo-sub">Full Stack Developer</span></span>
+        </a>
+
+        <div id="nav">
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <!-- <li><a href="javascript:void(0);" onclick="openDocModal('cv')"><i class="fas fa-file-alt"></i> CV</a></li>
+                    <li><a href="javascript:void(0);" onclick="openDocModal('cover-letter')"><i class="fas fa-envelope-open-text"></i> Cover Letter</a></li> -->
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-right">
+            <!-- Dark / Light Theme Toggle -->
+            <button id="theme-toggle" class="theme-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </button>
+
+            <!-- Mobile Menu Toggle -->
+            <a href="javascript:void(0);" class="icon" id="menu-toggle" onclick="toggleMobileNav()" aria-label="Toggle menu">&#9776;</a>
+        </div>
+    </header>
+
+    <!-- Home / Hero Section -->
+    <section id="home">
+        <div class="hero-grid">
+
+            <!-- Profile Photo with Aurora Background -->
+            <div class="hero-photo">
+                <div class="aurora-stage" aria-hidden="true">
+                    <span class="aurora-blob blob-a"></span>
+                    <span class="aurora-blob blob-b"></span>
+                </div>
+                <div class="profile-frame">
+                    <img src="Asset3.jpg" alt="Aklilu Workineh — Full Stack Developer" class="profile-photo" onerror="this.onerror=null; this.src='/public/assets/aistudio/Asset3_b85fd80f.jpg';">
+                    <div class="photo-duotone" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <p class="eyebrow"> WELCOME TO MY WEBSITE PORTFOLIO PAGE!</p>
+                <h1>Hi, I'm <span class="highlight">Aklilu Workineh</span></h1>
+                <h2>I build <span class="typing-text"></span><span class="cursor">&nbsp;</span></h2>
+                <p class="hero-desc">
+                    I'm an end-to-end full-stack software engineer equipped to design, build, and maintain both interactive frontend interfaces and robust backend architectures with relational and NoSQL databases, scalable REST APIs, and seamless system integrations.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-laptop-code"></i> Explore Work
+                    </a>
+                    <button class="btn btn-secondary" onclick="openDocModal('cv')">
+                        <i class="fas fa-file-alt"></i> View CV
+                    </button>
+                    <button class="btn btn-secondary" onclick="openDocModal('cover-letter')">
+                        <i class="fas fa-envelope-open-text"></i> View Cover Letter
+                    </button>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+
+                <!-- Metrics Strip -->
+                <div class="metrics-strip">
+                    <div class="metric-item">
+                        <strong>5+</strong>
+                        <span>Deployed Platforms</span>
+                    </div>
+                    <div class="metric-item">
+                        <strong>Full</strong>
+                        <span>Stack Architecture</span>
+                    </div>
+                    <div class="metric-item">
+                        <strong>&lt;100ms</strong>
+                        <span>Query Optimization</span>
+                    </div>
+                    <div class="metric-item">
+                        <strong>100%</strong>
+                        <span>Responsive UI</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me &amp; Skills</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    I am a passionate Full Stack Developer focused on crafting high-performance, user-centric digital experiences. I bring web and mobile products from early concept to production-ready deployments, with a strict focus on software architecture, clean code standards, database modeling, and system integrations.
+                </p>
+                <p>
+                    Whether engineering full-stack commerce platforms with real-time state synchronization or university student administration systems with role-based authorization hierarchies, I ensure reliability, accessible UI design, and fast query execution across every tier.
+                </p>
+            </div>
+
+            <div class="skills-wrapper">
+                <h3>Technical Proficiencies</h3>
+                
+                <div class="skills-category">
+                    <div class="skills-category-title">Frontend Engineering</div>
+                    <div class="skills-list">
+                        <span class="skill-tag"><i class="fab fa-react"></i> React.js</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> TypeScript / JavaScript</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> Tailwind CSS</span>
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5 / CSS3</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <div class="skills-category-title">Backend &amp; APIs</div>
+                    <div class="skills-list">
+                        <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> Express.js</span>
+                        <span class="skill-tag"><i class="fab fa-php"></i> PHP</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fas fa-shield-alt"></i> REST APIs &amp; JWT</span>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <div class="skills-category-title">Databases &amp; Tooling</div>
+                    <div class="skills-list">
+                        <span class="skill-tag"><i class="fas fa-database"></i> MongoDB</span>
+                        <span class="skill-tag"><i class="fas fa-table"></i> MySQL / SQL</span>
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git &amp; GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> VS Code</span>
+                        <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Flutter</span>
+                        <span class="skill-tag"><i class="fab fa-wordpress"></i> WordPress</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="grid-container" id="project-grid">
+
+            <!-- Project 1: Merkato.com -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3>Merkato.com Platform</h3>
+                    <p>A full-stack online commerce platform featuring dynamic cataloging, secure user authentication, order lifecycle tracking, and responsive multi-currency checkout processing.</p>
+                    <div class="card-tags">
+                        <span>React</span>
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="card-links">
+                        <a class="card-link live" href="https://merkato-platform.vercel.app" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i> Live Demo
+                        </a>
+                        <a class="card-link code" href="https://aklilu1219.github.io/Automated-finance-Expert/" target="_blank" rel="noopener">
+                            <i class="fas fa-chart-line"></i> AuraFinance
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Student Management System (SMS) -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Academic Records &amp; Student Management</h3>
+                    <p>A full-stack, role-based platform designed to streamline academic administration and student data management with custom portals for Super Admins, Registrars, and Students.</p>
+                    <div class="card-tags">
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>Tailwind</span>
+                    </div>
+                    <div class="card-links">
+                        <a class="card-link live" href="https://aklilu1219.github.io/Academic-Records-and-Student-management-System/" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i> Live SMS
+                        </a>
+                        <a class="card-link code" href="https://github.com/Aklilu1219/Academic-Records-and-Student-management-System" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: AAUODMS -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-building"></i></div>
+                    <h3>AAU Online Dormitory Management (AAUODMS)</h3>
+                    <p>Campus accommodation allocation and dormitory workflow system built for Addis Ababa University to handle room requests, resident verifications, and clearance logging.</p>
+                    <div class="card-tags">
+                        <span>JavaScript</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>Tailwind</span>
+                    </div>
+                    <div class="card-links">
+                        <a class="card-link live" href="https://aklilu1219.github.io/Addis-Ababa-University-Online-Dormitory-Management-System/" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i> Live AAUODMS
+                        </a>
+                        <a class="card-link code" href="https://github.com/Aklilu1219/Addis-Ababa-University-Online-Dormitory-Management-System" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Collaborative Task & To-Do Workspace -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-tasks"></i></div>
+                    <h3>Collaborative Task &amp; To-Do App</h3>
+                    <p>Interactive task board application featuring state transitions, priority filtering, real-time board updates, and persistent client-side data caching.</p>
+                    <div class="card-tags">
+                        <span>JavaScript (ES6)</span>
+                        <span>Tailwind</span>
+                        <span>REST API</span>
+                    </div>
+                    <div class="card-links">
+                        <a class="card-link live" href="https://aklilu1219.github.io/To-do-list-app/" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i> Live App
+                        </a>
+                        <a class="card-link code" href="https://github.com/Aklilu1219/To-do-list-app" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: KUE University Portal -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-university"></i></div>
+                    <h3>KUE Institutional Educational Portal</h3>
+                    <p>Institutional university web portal providing comprehensive departmental navigation, course schedules, online prospectus, faculty directory, and announcements.</p>
+                    <div class="card-tags">
+                        <span>JavaScript</span>
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>PHP</span>
+                    </div>
+                    <div class="card-links">
+                        <a class="card-link live" href="https://aklilu1219.github.io/KUE_edu.et/" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i> Live Portal
+                        </a>
+                        <a class="card-link code" href="https://github.com/Aklilu1219/KUE_edu.et" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Portfolio Generator -->
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Portfolio Generator Platform</h3>
+                    <p>Dynamic web suite allowing developers to assemble clean, professional online portfolios and resumes with customizable sections and live previews.</p>
+                    <div class="card-tags">
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Tailwind</span>
+                        <span>Vercel</span>
+                    </div>
+                    <div class="card-links">
+                        <a class="card-link live" href="https://portfolio-generator.vercel.app" target="_blank" rel="noopener">
+                            <i class="fas fa-external-link-alt"></i> Live Generator
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Services</h2>
+        <div class="grid-container">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-code"></i></div>
+                    <h3>Frontend Engineering</h3>
+                    <p>Building accessible, cross-browser responsive interfaces with fluid micro-interactions and high Lighthouse performance ratings.</p>
+                    <ul class="service-features">
+                        <li>Modern React &amp; TypeScript SPAs</li>
+                        <li>Tailwind CSS design systems</li>
+                        <li>Responsive layouts across desktop &amp; mobile</li>
+                        <li>Accessibility &amp; SEO best practices</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-server"></i></div>
+                    <h3>Backend Architecture</h3>
+                    <p>Designing secure API gateways, microservices, relational and non-relational database models, and server-side application logic.</p>
+                    <ul class="service-features">
+                        <li>Node.js &amp; Express server pipelines</li>
+                        <li>MySQL &amp; MongoDB schema modeling</li>
+                        <li>JWT authentication &amp; role-based access</li>
+                        <li>Optimized database queries &amp; indexing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-icon"><i class="fas fa-cubes"></i></div>
+                    <h3>Full Stack Integration</h3>
+                    <p>End-to-end web application development, deployment pipelines, performance optimization, and ongoing maintenance.</p>
+                    <ul class="service-features">
+                        <li>Complete concept-to-deployment workflow</li>
+                        <li>Vercel, Cloud Run &amp; Linux hosting</li>
+                        <li>Third-party API &amp; webhook integrations</li>
+                        <li>Code audits &amp; performance tuning</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <div class="contact-grid">
+            
+            <!-- Contact Form -->
+            <div class="form-container">
+                <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email Address</label>
+                        <input type="email" id="email" required placeholder="you@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required placeholder="Write your message or project inquiry here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Direct Contact Info Card -->
+            <div class="contact-info-card">
+                <h3>Let's Connect Directly</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">
+                    Have an opportunity, contract project, or technical question? Reach out through any of these direct channels:
+                </p>
+
+                <!-- Prominent Click to Call -->
+                <a href="tel:+251934319870" class="call-cta">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <strong>Direct Phone / WhatsApp</strong>
+                        <small>+251 934 319 870</small>
+                    </div>
+                </a>
+
+                <div class="social-icons">
+                    <a href="mailto:akliluworkineh699@gmail.com" class="social-icon email" title="Send Email" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+251934319870" class="social-icon phone" title="Call directly" aria-label="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="https://t.me/aklilu_1219" target="_blank" rel="noopener noreferrer" class="social-icon telegram" title="Telegram" aria-label="Telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="https://github.com/Aklilu1219" target="_blank" rel="noopener noreferrer" class="social-icon github" title="GitHub" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aklilu-workineh-02594a32a/" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" title="LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p class="footer-tagline">Crafting resilient web applications with modern engineering rigor.</p>
+
+            <a href="#home" class="back-to-top" id="back-to-top" aria-label="Back to top">
+                <i class="fas fa-arrow-up"></i>
+                <span>Back to top</span>
+            </a>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aklilu Workineh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====================================================================
+         IN-BROWSER LIVE DOCUMENT VIEWER MODAL (CV & Cover Letter)
+         Resolves the unreadable/corrupted PDF issue with live rendering,
+         print-to-PDF formatting, text download, and live in-browser editing.
+         ==================================================================== -->
+    <div id="doc-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="doc-modal-title">
+        <div class="modal-content">
+            
+            <div class="modal-header">
+                <h3 class="modal-title" id="doc-modal-title">
+                    <i class="fas fa-file-alt"></i> Curriculum Vitae (CV)
+                </h3>
+                <button class="close-modal" onclick="closeDocModal()" aria-label="Close document modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                
+                <!-- Document Controls Bar -->
+                <div class="doc-controls-bar">
+                    <!-- Tab Switcher -->
+                    <div class="doc-tabs">
+                        <button class="doc-tab-btn active" id="tab-btn-cv" onclick="switchDocTab('cv')">
+                            <i class="fas fa-file-alt"></i> Curriculum Vitae
+                        </button>
+                        <button class="doc-tab-btn" id="tab-btn-cl" onclick="switchDocTab('cover-letter')">
+                            <i class="fas fa-envelope-open-text"></i> Cover Letter
+                        </button>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="doc-actions-group">
+                        <button class="doc-action-btn" id="btn-edit-doc" onclick="toggleEditDoc()" title="Toggle live in-browser editing">
+                            <i class="fas fa-edit"></i> Edit Mode
+                        </button>
+                        <button class="doc-action-btn" onclick="printDocument()" title="Print document or Save as PDF">
+                            <i class="fas fa-print"></i> Print / Save PDF
+                        </button>
+                        <button class="doc-action-btn" onclick="downloadDocumentText()" title="Download text file">
+                            <i class="fas fa-download"></i> Download Text
+                        </button>
+                        <button class="doc-action-btn" onclick="openCleanTab()" title="Open clean document in dedicated window">
+                            <i class="fas fa-external-link-alt"></i> Clean Tab
+                        </button>
+                        <button class="doc-action-btn" id="btn-copy-doc" onclick="copyDocumentText()" title="Copy text to clipboard">
+                            <i class="fas fa-copy"></i> Copy
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Paper Canvas -->
+                <div class="paper-document" id="paper-canvas">
+                    
+                    <!-- CV Content -->
+                    <div id="doc-content-cv">
+                        <div class="paper-header">
+                            <h1 class="editable-field">Aklilu Workineh</h1>
+                            <div class="paper-subtitle editable-field">Full Stack Software Developer</div>
+                            <div class="paper-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> Addis Ababa, Ethiopia</span>
+                                <span>·</span>
+                                <span><i class="fas fa-envelope"></i> <a href="mailto:akliluworkineh699@gmail.com">akliluworkineh699@gmail.com</a></span>
+                                <span>·</span>
+                                <span><i class="fas fa-phone"></i> <a href="tel:+251934319870">+251 934 319 870</a></span>
+                                <span>·</span>
+                                <span><i class="fab fa-github"></i> <a href="https://github.com/Aklilu1219" target="_blank">github.com/Aklilu1219</a></span>
+                            </div>
+                        </div>
+
+                        <div class="paper-section">
+                            <div class="paper-section-title">Professional Summary</div>
+                            <p class="paper-p editable-field">
+                                Results-driven Full Stack Developer with hands-on experience designing, developing, and deploying high-availability web applications and academic management systems. Proficient across modern JavaScript and TypeScript ecosystems, React, Node.js, Express, Python, and relational / NoSQL database architectures. Proven record in architecting responsive user interfaces, implementing robust role-based authentication, and optimizing database performance for high-concurrency workflows.
+                            </p>
+                        </div>
+
+                        <div class="paper-section">
+                            <div class="paper-section-title">Technical Proficiencies</div>
+                            <div class="paper-skills-grid">
+                                <div><strong>Frontend:</strong> React.js, TypeScript, JavaScript (ES6+), Tailwind CSS, HTML5, CSS3, Responsive Design</div>
+                                <div><strong>Backend &amp; APIs:</strong> Node.js, Express.js, RESTful API Design, PHP, Python, JWT Authentication</div>
+                                <div><strong>Databases:</strong> MongoDB, MySQL, Schema Design, Query Indexing &amp; Optimization</div>
+                                <div><strong>DevOps &amp; Tools:</strong> Git, GitHub, Linux / Bash, Postman, Vercel, VS Code Suite</div>
+                            </div>
+                        </div>
+
+                        <div class="paper-section">
+                            <div class="paper-section-title">Professional Experience</div>
+                            
+                            <div class="paper-exp-item">
+                                <div class="paper-exp-header">
+                                    <span class="editable-field">Full Stack Software Developer · Independent &amp; Client Engagements</span>
+                                    <span class="paper-exp-date editable-field">2023 - Present</span>
+                                </div>
+                                <div class="paper-exp-company">Addis Ababa, Ethiopia</div>
+                                <ul class="paper-list">
+                                    <li class="editable-field">Architected and deployed full-stack web platforms including the Merkato.com platform and institutional administrative portals.</li>
+                                    <li class="editable-field">Constructed secure REST API endpoints with JWT token validation, error middleware, and role-based permissions.</li>
+                                    <li class="editable-field">Optimized responsive client interfaces with Tailwind CSS, reducing mobile load latency and improving cross-browser compatibility.</li>
+                                    <li class="editable-field">Designed MySQL and MongoDB schemas with indexing strategies, ensuring sub-100ms response latencies under concurrent queries.</li>
+                                </ul>
+                            </div>
+
+                            <div class="paper-exp-item">
+                                <div class="paper-exp-header">
+                                    <span class="editable-field">Web Application Developer · Academic Systems Project</span>
+                                    <span class="paper-exp-date editable-field">2022 - 2023</span>
+                                </div>
+                                <div class="paper-exp-company">Addis Ababa, Ethiopia</div>
+                                <ul class="paper-list">
+                                    <li class="editable-field">Developed the Addis Ababa University Online Dormitory Management System (AAUODMS) to automate room allocation workflows.</li>
+                                    <li class="editable-field">Engineered registrar and student portals for student course enrollment, grade compilation, and automated transcript reporting.</li>
+                                    <li class="editable-field">Worked directly with university administrators to translate institutional guidelines into fault-tolerant web forms.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="paper-section">
+                            <div class="paper-section-title">Key Featured Projects</div>
+                            <div style="margin-bottom: 8px;">
+                                <p class="paper-p"><strong>Merkato.com Platform:</strong> Full-stack e-commerce marketplace featuring dynamic product cataloging, cart state synchronization, and checkout. (React, Node.js, Express, MongoDB)</p>
+                            </div>
+                            <div style="margin-bottom: 8px;">
+                                <p class="paper-p"><strong>Academic Records &amp; Student Management System:</strong> Comprehensive multi-role platform with custom portals for Super Admins, Registrars, and Students. (PHP, MySQL, JavaScript, Tailwind)</p>
+                            </div>
+                            <div>
+                                <p class="paper-p"><strong>AAU Online Dormitory Management (AAUODMS):</strong> Campus accommodation allocation and resident clearance tool. (PHP, MySQL, JavaScript)</p>
+                            </div>
+                        </div>
+
+                        <div class="paper-section">
+                            <div class="paper-section-title">Education</div>
+                            <div class="paper-exp-header">
+                                <span class="editable-field">Bachelor of Science in Computer Science / Information Technology</span>
+                                <span class="paper-exp-date editable-field">Honors Graduate</span>
+                            </div>
+                            <div class="paper-exp-company">Higher Education Institution</div>
+                            <p class="paper-p editable-field">Comprehensive curriculum covering Data Structures, Algorithms, Software Engineering, Database Systems, and Network Architecture.</p>
+                        </div>
+
+                        <div class="paper-section">
+                            <div class="paper-section-title">Languages</div>
+                            <p class="paper-p editable-field">English (Professional Working Proficiency) · Amharic (Native)</p>
+                        </div>
+                    </div>
+
+                    <!-- Cover Letter Content -->
+                    <div id="doc-content-cl" style="display: none;">
+                        <div class="paper-header">
+                            <h1 class="editable-field">Aklilu Workineh</h1>
+                            <div class="paper-subtitle editable-field">Full Stack Developer</div>
+                            <div class="paper-meta">
+                                <span>Addis Ababa, Ethiopia</span>
+                                <span>·</span>
+                                <span>akliluworkineh699@gmail.com</span>
+                                <span>·</span>
+                                <span>+251 934 319 870</span>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 20px; font-size: 0.88rem; color: #64748b; line-height: 1.5;">
+                            <p><strong>Date:</strong> October 2026</p>
+                            <p><strong>To:</strong> Hiring Team &amp; Technical Leads</p>
+                            <p><strong>Subject:</strong> Application for Full Stack Software Developer</p>
+                        </div>
+
+                        <p style="font-weight: 600; color: #0f172a; margin-bottom: 14px;" class="editable-field">
+                            Dear Hiring Manager &amp; Engineering Team,
+                        </p>
+
+                        <div class="paper-section">
+                            <p class="paper-p editable-field" style="margin-bottom: 14px;">
+                                I am writing to express my enthusiastic interest in joining your organization as a Full Stack Developer. With a strong foundation in designing, architecting, and deploying full-scale web platforms—spanning responsive React interfaces, secure RESTful backend APIs in Node.js, Express, and PHP, and optimized database models in MySQL and MongoDB—I am excited to bring my technical versatility and software craftsmanship to your engineering projects.
+                            </p>
+                            <p class="paper-p editable-field" style="margin-bottom: 14px;">
+                                Throughout my engineering work, I have taken full ownership of complex software lifecycles. On the Merkato.com platform, I built an end-to-end commerce experience featuring dynamic product cataloging, state synchronization, and secure user authentication. In developing the Academic Student Management System and the Addis Ababa University Dormitory Management System, I engineered role-based authorization hierarchies and high-concurrency database queries that simplified administrative workflows for hundreds of users.
+                            </p>
+                            <p class="paper-p editable-field" style="margin-bottom: 14px;">
+                                My approach to software engineering centers on writing clean, modular code, enforcing strict error handling, and delivering accessible, responsive user interfaces. I value close collaboration with product stakeholders and fellow engineers, translating high-level business goals into scalable software solutions.
+                            </p>
+                            <p class="paper-p editable-field" style="margin-bottom: 14px;">
+                                I would welcome the opportunity to discuss how my development background, technical skills, and commitment to high-quality code can contribute to your team. Thank you for your time and consideration, and I look forward to speaking with you soon.
+                            </p>
+                        </div>
+
+                        <div style="margin-top: 24px; white-space: pre-line; font-weight: 500; color: #0f172a;" class="editable-field">
+Sincerely,
+Aklilu Workineh
+Full Stack Developer
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <!-- Hidden mount root for React applet compilation compatibility -->
+    <div id="root" style="display: none;"></div>
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
